@@ -1,17 +1,12 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=3 format=2]
 
-[ext_resource path="res://assets/screen_concept.png" type="Texture" id=1]
 [ext_resource path="res://src/BeeHero/BeeHero.tscn" type="PackedScene" id=2]
 [ext_resource path="res://src/Obstacles/Obstacle1/Obstacle1.tscn" type="PackedScene" id=3]
 
 [node name="Node2D" type="Node2D"]
 
-[node name="Sprite" type="Sprite" parent="."]
-texture = ExtResource( 1 )
-centered = false
-
 [node name="BeeHero" parent="." instance=ExtResource( 2 )]
-position = Vector2( 570, 1534 )
+position = Vector2( 562.5, 1534 )
 
 [node name="Obstacle1" parent="." instance=ExtResource( 3 )]
 position = Vector2( 572, 522 )
