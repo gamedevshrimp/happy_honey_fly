@@ -9,4 +9,19 @@
 position = Vector2( 562.5, 1534 )
 
 [node name="Obstacle1" parent="." instance=ExtResource( 3 )]
-position = Vector2( 572, 522 )
+position = Vector2( 540, 522 )
+
+[node name="Obstacle2" parent="." instance=ExtResource( 3 )]
+position = Vector2( 582, -735 )
+rotation = -2.61276
+rotation_speed = -60
+
+[node name="Obstacle3" parent="." instance=ExtResource( 3 )]
+position = Vector2( 582, -2118 )
+rotation = 2.61276
+rotation_speed = -120
+
+[node name="Obstacle4" parent="." instance=ExtResource( 3 )]
+position = Vector2( 582, -3563 )
+rotation = 2.61276
+rotation_speed = -120
