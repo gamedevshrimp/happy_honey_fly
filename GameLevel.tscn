@@ -1,0 +1,40 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://src/Obstacles/Obstacle2/ObstacleStickRotate.tscn" type="PackedScene" id=1]
+[ext_resource path="res://src/BeeHero/BeeHero.tscn" type="PackedScene" id=2]
+[ext_resource path="res://src/Obstacles/Obstacle1/ObstacleCircleRotate.tscn" type="PackedScene" id=3]
+[ext_resource path="res://src/Obstacles/Obstacle3/ObstaclePendulum.tscn" type="PackedScene" id=4]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="BeeHero" parent="." instance=ExtResource( 2 )]
+position = Vector2( 562.5, 1534 )
+
+[node name="Obstacle2" parent="." instance=ExtResource( 3 )]
+position = Vector2( 502, -5494 )
+rotation = -1.0821
+rotation_speed = -100
+
+[node name="Obstacle4" parent="." instance=ExtResource( 3 )]
+position = Vector2( 585, -3932 )
+rotation = 2.61276
+rotation_speed = -120
+
+[node name="ObstacleStickRotate" parent="." instance=ExtResource( 1 )]
+position = Vector2( 1058, 599 )
+rotation_speed = 70
+
+[node name="ObstacleStickRotate2" parent="." instance=ExtResource( 1 )]
+position = Vector2( 165, -181 )
+rotation = -2.83791
+rotation_speed = -60
+
+[node name="Position2D" type="Position2D" parent="."]
+position = Vector2( 1634, -2187 )
+rotation = 1.5708
+scale = Vector2( 2, 2 )
+
+[node name="ObstaclePendulum" parent="Position2D" instance=ExtResource( 4 )]
+position = Vector2( 0, -1.5 )
+rotation = -1.39452
+rotation_speed = 20

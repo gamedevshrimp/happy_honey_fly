@@ -3,7 +3,7 @@ export var rotation_speed = 100
 export (PackedScene) var pause_menu
  
 func _process(delta: float) -> void:
-	rotation_degrees += 100 * delta
+	rotation_degrees += rotation_speed * delta
 	
 
 
