@@ -1,14 +1,22 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://src/Obstacles/Obstacle2/ObstacleStickRotate.tscn" type="PackedScene" id=1]
 [ext_resource path="res://src/BeeHero/BeeHero.tscn" type="PackedScene" id=2]
 [ext_resource path="res://src/Obstacles/Obstacle1/ObstacleCircleRotate.tscn" type="PackedScene" id=3]
 [ext_resource path="res://src/Obstacles/Obstacle3/ObstaclePendulum.tscn" type="PackedScene" id=4]
+[ext_resource path="res://src/BGSprite/BGSprite.tscn" type="PackedScene" id=5]
 
 [node name="Node2D" type="Node2D"]
 
+[node name="BGSprite" parent="." instance=ExtResource( 5 )]
+path_to_bee = NodePath("../BeeHero")
+
+[node name="BGSprite2" parent="." instance=ExtResource( 5 )]
+position = Vector2( 0, 2436 )
+path_to_bee = NodePath("../BeeHero")
+
 [node name="BeeHero" parent="." instance=ExtResource( 2 )]
-position = Vector2( 562.5, 1534 )
+position = Vector2( 562.5, 1218 )
 
 [node name="Obstacle2" parent="." instance=ExtResource( 3 )]
 position = Vector2( 502, -5494 )
