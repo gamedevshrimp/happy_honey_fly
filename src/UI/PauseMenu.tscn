@@ -38,6 +38,7 @@ margin_bottom = 210.0
 custom_constants/separation = 20
 
 [node name="ButtonReset" type="Button" parent="Control/VBoxContainer"]
+pause_mode = 2
 margin_right = 800.0
 margin_bottom = 200.0
 rect_min_size = Vector2( 800, 200 )
@@ -49,6 +50,7 @@ custom_styles/normal = ExtResource( 1 )
 text = "RESET"
 
 [node name="MainMenu" type="Button" parent="Control/VBoxContainer"]
+pause_mode = 2
 margin_top = 220.0
 margin_right = 800.0
 margin_bottom = 420.0

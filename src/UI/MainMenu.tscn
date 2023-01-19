@@ -17,6 +17,7 @@ pause_mode = 2
 script = ExtResource( 3 )
 
 [node name="Control" type="Control" parent="."]
+pause_mode = 2
 anchor_right = 1.0
 anchor_bottom = 1.0
 
@@ -37,6 +38,7 @@ margin_bottom = 100.0
 custom_constants/separation = 20
 
 [node name="MainMenu" type="Button" parent="Control/VBoxContainer"]
+pause_mode = 2
 margin_right = 700.0
 margin_bottom = 200.0
 rect_min_size = Vector2( 700, 200 )
