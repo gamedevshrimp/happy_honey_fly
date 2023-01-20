@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://assets/ui_buttons_styles/normal_button_style.tres" type="StyleBox" id=1]
 [ext_resource path="res://assets/ui_buttons_styles/hover_button_style.tres" type="StyleBox" id=2]
@@ -13,6 +13,134 @@ outline_color = Color( 0.745098, 0.286275, 0.196078, 1 )
 extra_spacing_char = -5
 font_data = ExtResource( 4 )
 
+[sub_resource type="Animation" id=2]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath("Control/ColorRect:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 0, 0, 0, 0 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Control/VBoxContainer/ButtonReset:rect_scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Control/VBoxContainer/MainMenu:rect_scale")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("Control/VBoxContainer/ButtonReset:modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("Control/VBoxContainer/MainMenu:modulate")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ) ]
+}
+
+[sub_resource type="Animation" id=3]
+resource_name = "anim_appear"
+length = 0.45
+step = 0.02
+tracks/0/type = "value"
+tracks/0/path = NodePath("Control/ColorRect:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.3 ),
+"transitions": PoolRealArray( 0.203063, 1 ),
+"update": 0,
+"values": [ Color( 0, 0, 0, 0 ), Color( 0, 0, 0, 0.509804 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Control/VBoxContainer/ButtonReset:rect_scale")
+tracks/1/interp = 2
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.06, 0.1 ),
+"transitions": PoolRealArray( 0.933032, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 1e-05, 1e-05 ), Vector2( 1.02, 1 ), Vector2( 1, 1 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Control/VBoxContainer/MainMenu:rect_scale")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0.04, 0.1, 0.14 ),
+"transitions": PoolRealArray( 1.41421, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 1e-05, 1e-05 ), Vector2( 1.02, 1 ), Vector2( 1, 1 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("Control/VBoxContainer/ButtonReset:modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 0.1 ),
+"transitions": PoolRealArray( 2.14355, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("Control/VBoxContainer/MainMenu:modulate")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0.04, 0.14 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+
 [node name="PauseMenu" type="CanvasLayer"]
 pause_mode = 2
 script = ExtResource( 5 )
@@ -24,7 +152,7 @@ anchor_bottom = 1.0
 [node name="ColorRect" type="ColorRect" parent="Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
-color = Color( 0, 0, 0, 0.117647 )
+color = Color( 0, 0, 0, 0 )
 
 [node name="VBoxContainer" type="VBoxContainer" parent="Control"]
 anchor_left = 0.5
@@ -42,6 +170,8 @@ pause_mode = 2
 margin_right = 800.0
 margin_bottom = 200.0
 rect_min_size = Vector2( 800, 200 )
+rect_scale = Vector2( 1e-05, 1e-05 )
+rect_pivot_offset = Vector2( 392.5, 106 )
 size_flags_horizontal = 3
 size_flags_vertical = 3
 custom_fonts/font = ExtResource( 3 )
@@ -51,16 +181,24 @@ text = "RESET"
 
 [node name="MainMenu" type="Button" parent="Control/VBoxContainer"]
 pause_mode = 2
+modulate = Color( 1, 1, 1, 0 )
 margin_top = 220.0
 margin_right = 800.0
 margin_bottom = 420.0
 rect_min_size = Vector2( 700, 200 )
+rect_scale = Vector2( 1e-05, 1e-05 )
+rect_pivot_offset = Vector2( 399.5, 106 )
 size_flags_horizontal = 3
 size_flags_vertical = 3
 custom_fonts/font = SubResource( 1 )
 custom_styles/hover = ExtResource( 2 )
 custom_styles/normal = ExtResource( 1 )
 text = "Main Menu"
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+autoplay = "anim_appear"
+anims/RESET = SubResource( 2 )
+anims/anim_appear = SubResource( 3 )
 
 [connection signal="pressed" from="Control/VBoxContainer/ButtonReset" to="." method="_on_ButtonReset_pressed"]
 [connection signal="pressed" from="Control/VBoxContainer/MainMenu" to="." method="_on_MainMenu_pressed"]
