@@ -1,10 +1,11 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://assets/ui_buttons_styles/normal_button_style.tres" type="StyleBox" id=1]
 [ext_resource path="res://assets/ui_buttons_styles/hover_button_style.tres" type="StyleBox" id=2]
 [ext_resource path="res://assets/fonts/button_dynamicfont.tres" type="DynamicFont" id=3]
 [ext_resource path="res://assets/fonts/Kenney Future.ttf" type="DynamicFontData" id=4]
 [ext_resource path="res://src/UI/PauseMenu.gd" type="Script" id=5]
+[ext_resource path="res://assets/ui_buttons_styles/pressed_button_style.tres" type="StyleBox" id=6]
 
 [sub_resource type="DynamicFont" id=1]
 size = 100
@@ -176,6 +177,7 @@ size_flags_horizontal = 3
 size_flags_vertical = 3
 custom_fonts/font = ExtResource( 3 )
 custom_styles/hover = ExtResource( 2 )
+custom_styles/pressed = ExtResource( 6 )
 custom_styles/normal = ExtResource( 1 )
 text = "RESET"
 
@@ -192,6 +194,7 @@ size_flags_horizontal = 3
 size_flags_vertical = 3
 custom_fonts/font = SubResource( 1 )
 custom_styles/hover = ExtResource( 2 )
+custom_styles/pressed = ExtResource( 6 )
 custom_styles/normal = ExtResource( 1 )
 text = "Main Menu"
 

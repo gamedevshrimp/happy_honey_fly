@@ -7,7 +7,7 @@ func _ready() -> void:
 
 
 func _on_MainMenu_pressed() -> void:
-	lvl_manager.scene_transition("res://src/UI/MainMenu.tscn")
+	lvl_manager.scene_transition("res://src/UI/MainMenu/MainMenu.tscn")
 
 
 func _on_ButtonReset_pressed() -> void:
