@@ -1,0 +1,117 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://src/UI/MainMenu/anim_logo/Bee/bee.png" type="Texture" id=1]
+[ext_resource path="res://src/UI/MainMenu/anim_logo/Bee/fly1.png" type="Texture" id=2]
+[ext_resource path="res://src/UI/MainMenu/anim_logo/bglogo.png" type="Texture" id=3]
+[ext_resource path="res://src/UI/MainMenu/anim_logo/Bee/fly2.png" type="Texture" id=4]
+[ext_resource path="res://src/UI/MainMenu/anim_logo/top_ring.png" type="Texture" id=5]
+
+[sub_resource type="Animation" id=1]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath("bee:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 31, 86 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("bee/fly1:rotation_degrees")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ -14.6 ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("bee/fly2:rotation_degrees")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 17.5 ]
+}
+
+[sub_resource type="Animation" id=2]
+resource_name = "logo_idle"
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("bee:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.5, 1 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 31, 86 ), Vector2( 31, 95 ), Vector2( 31, 86 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("bee/fly1:rotation_degrees")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1, 1.1 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ -14.6, 20.4, -14.6, 20.4, -14.6, 20.4, -14.6, 20.4, -14.6, 20.4, -14.6, 20.4 ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("bee/fly2:rotation_degrees")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1, 1.1 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ 17.5, 0.0, 17.5, 0.0, 17.5, 0.0, 17.5, 0.0, 17.5, 0.0, 17.5, 0.0 ]
+}
+
+[node name="BeeLogo" type="Sprite"]
+texture = ExtResource( 3 )
+
+[node name="bee" type="Sprite" parent="."]
+position = Vector2( 31, 86 )
+texture = ExtResource( 1 )
+offset = Vector2( -6, -6 )
+
+[node name="fly1" type="Sprite" parent="bee"]
+position = Vector2( 66, -169 )
+rotation = -0.254818
+texture = ExtResource( 2 )
+centered = false
+offset = Vector2( -52, -225 )
+
+[node name="fly2" type="Sprite" parent="bee"]
+position = Vector2( 123, -127 )
+rotation = 0.305433
+texture = ExtResource( 4 )
+centered = false
+offset = Vector2( -23, -200 )
+
+[node name="ring" type="Sprite" parent="."]
+texture = ExtResource( 5 )
+offset = Vector2( -6, -6 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+autoplay = "logo_idle"
+anims/RESET = SubResource( 1 )
+anims/logo_idle = SubResource( 2 )
