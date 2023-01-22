@@ -8,6 +8,7 @@
 extents = Vector2( 602, 85.5 )
 
 [node name="ObstacleStickRotate" type="Area2D"]
+collision_layer = 2
 script = ExtResource( 2 )
 pause_menu = ExtResource( 3 )
 

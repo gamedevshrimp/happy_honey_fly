@@ -5,13 +5,22 @@
 [ext_resource path="res://src/UI/PauseMenu.tscn" type="PackedScene" id=3]
 
 [node name="ObstacleCircleRotate" type="Area2D"]
+collision_layer = 2
 script = ExtResource( 2 )
+__meta__ = {
+"_edit_horizontal_guides_": [ 271.0 ],
+"_edit_vertical_guides_": [ -278.0, 275.0 ]
+}
 pause_menu = ExtResource( 3 )
 
 [node name="Obstacle1" type="Sprite" parent="."]
+position = Vector2( -3.6897, -20.7877 )
+rotation = -0.0369605
 texture = ExtResource( 1 )
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+position = Vector2( -3.6897, -20.7877 )
+rotation = -0.0369605
 polygon = PoolVector2Array( -279, -150, -378, -222, -385, -227, -393, -228, -402, -227, -407, -222, -436, -165, -463, -79, -472, -13, -471, 57, -454, 151, -412, 249, -369, 314, -294, 389, -225, 434, -151, 468, -31, 494, 91, 487, 201, 453, 289, 403, 375, 323, 432, 237, 474, 130, 486, 41, 479, -66, 455, -156, 435, -196, 426, -202, 415, -203, 410, -201, 292, -125, 286, -119, 285, -108, 296, -78, 308, -10, 306, 58, 291, 117, 263, 177, 209, 241, 129, 293, 49, 316, -32, 318, -113, 297, -183, 258, -248, 191, -289, 110, -306, 17, -301, -47, -285, -95, -274, -124, -271, -135, -273, -144 )
 
 [connection signal="body_entered" from="." to="." method="_on_Obstacle_body_entered"]

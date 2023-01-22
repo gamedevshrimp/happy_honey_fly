@@ -11,6 +11,7 @@ extents = Vector2( 272, 85.5 )
 extents = Vector2( 16.5, 312.25 )
 
 [node name="ObstaclePendulum" type="Area2D"]
+collision_layer = 2
 script = ExtResource( 2 )
 pause_menu = ExtResource( 3 )
 
