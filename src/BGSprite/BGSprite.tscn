@@ -1,6 +1,6 @@
 [gd_scene load_steps=6 format=2]
 
-[ext_resource path="res://src/BGSprite/background.png" type="Texture" id=1]
+[ext_resource path="res://src/BGSprite/bg_ipad.png" type="Texture" id=1]
 [ext_resource path="res://src/BGSprite/BGSprite.gd" type="Script" id=2]
 [ext_resource path="res://src/BGSprite/bg_hex.png" type="Texture" id=3]
 
@@ -196,3 +196,13 @@ texture = ExtResource( 3 )
 autoplay = "bg_idle_anim"
 anims/RESET = SubResource( 1 )
 anims/bg_idle_anim = SubResource( 2 )
+
+[node name="bgside" type="Sprite" parent="."]
+texture = ExtResource( 1 )
+centered = false
+offset = Vector2( 2048, 0 )
+
+[node name="bgside2" type="Sprite" parent="."]
+texture = ExtResource( 1 )
+centered = false
+offset = Vector2( -2048, 0 )

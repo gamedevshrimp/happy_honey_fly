@@ -1,6 +1,7 @@
 extends Area2D
 export var rotation_speed = 100
 export (PackedScene) var pause_menu
+
  
 func _process(delta: float) -> void:
 	rotation_degrees += rotation_speed * delta

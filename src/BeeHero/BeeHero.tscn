@@ -121,11 +121,6 @@ __meta__ = {
 "_edit_group_": true
 }
 
-[node name="Camera2D" type="Camera2D" parent="."]
-current = true
-smoothing_enabled = true
-smoothing_speed = 10.0
-
 [node name="Body" type="Sprite" parent="."]
 position = Vector2( -3, 24 )
 scale = Vector2( 0.7, 0.7 )
@@ -171,3 +166,9 @@ position = Vector2( -7, 18 )
 rotation = -1.15192
 z_index = 11
 shape = SubResource( 1 )
+
+[node name="Camera2D" type="Camera2D" parent="."]
+current = true
+process_mode = 0
+limit_smoothed = true
+smoothing_enabled = true

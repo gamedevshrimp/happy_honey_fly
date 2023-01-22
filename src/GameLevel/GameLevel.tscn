@@ -1,10 +1,9 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://src/GameLevel/GameLevel.gd" type="Script" id=1]
 [ext_resource path="res://src/Obstacles/Obstacle1/ObstacleCircleRotate.tscn" type="PackedScene" id=3]
 [ext_resource path="res://src/BeeHero/BeeHero.tscn" type="PackedScene" id=4]
 [ext_resource path="res://src/BGSprite/BGSprite.tscn" type="PackedScene" id=5]
-[ext_resource path="res://src/Obstacles/Obstacle2/ObstacleStickRotate.tscn" type="PackedScene" id=6]
 [ext_resource path="res://src/Obstacles/Obstacle4/Obstacle4.tscn" type="PackedScene" id=7]
 [ext_resource path="res://src/UI/PauseMenu.tscn" type="PackedScene" id=8]
 
@@ -14,30 +13,29 @@ __meta__ = {
 "_edit_vertical_guides_": [ 577.0, 1138.0 ]
 }
 
-[node name="BGSprite" parent="." instance=ExtResource( 5 )]
-path_to_bee = NodePath("../BeeHero")
+[node name="Control" type="Control" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
 
-[node name="BGSprite2" parent="." instance=ExtResource( 5 )]
-position = Vector2( 0, 2436 )
-path_to_bee = NodePath("../BeeHero")
+[node name="BGSprite" parent="Control" instance=ExtResource( 5 )]
+path_to_bee = NodePath("../../BeeHero")
+
+[node name="BGSprite2" parent="Control" instance=ExtResource( 5 )]
+position = Vector2( 0, 2732 )
+path_to_bee = NodePath("../../BeeHero")
+
+[node name="BGSprite3" parent="Control" instance=ExtResource( 5 )]
+position = Vector2( 0, -2732 )
+path_to_bee = NodePath("../../BeeHero")
 
 [node name="BeeHero" parent="." instance=ExtResource( 4 )]
-position = Vector2( 562.5, 1781 )
+position = Vector2( 1024, 0 )
 
 [node name="ObstacleHorizontalLine" parent="." instance=ExtResource( 7 )]
 position = Vector2( 586, 3267 )
 move_speed = 0.0
 pause_menu = ExtResource( 8 )
 shift_distance = 1
-
-[node name="ObstacleStickRotate" parent="." instance=ExtResource( 6 )]
-position = Vector2( 1058, 599 )
-rotation_speed = 50
-
-[node name="ObstacleStickRotate2" parent="." instance=ExtResource( 6 )]
-position = Vector2( 165, -181 )
-rotation = -2.83791
-rotation_speed = -40
 
 [node name="ObstacleCircleRotate2" parent="." instance=ExtResource( 3 )]
 position = Vector2( 577, -2959 )
@@ -74,15 +72,6 @@ rotation_speed = -70
 position = Vector2( 576, -11601 )
 rotation = -1.44164
 rotation_speed = 110
-
-[node name="ObstacleStickRotate4" parent="." instance=ExtResource( 6 )]
-position = Vector2( 871, -13613 )
-rotation = 1.64411
-
-[node name="ObstacleStickRotate3" parent="." instance=ExtResource( 6 )]
-position = Vector2( 187, -15667 )
-rotation = -2.83791
-rotation_speed = -100
 
 [node name="ObstacleHorizontalLine5" parent="." instance=ExtResource( 7 )]
 position = Vector2( 570, -16868 )
