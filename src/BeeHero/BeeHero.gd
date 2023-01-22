@@ -5,7 +5,7 @@ var velocity: = Vector2.DOWN
 var move: = 0.0
 var up_power: = 1.2
 
-func _process(delta: float) -> void:
+func _physics_process(delta: float) -> void:
 	position.x = 570
 	velocity.y += GRAVITY
 	if (Input.is_action_pressed("move_up")):

@@ -5,7 +5,7 @@
 [ext_resource path="res://assets/ui_buttons_styles/normal_button_style.tres" type="StyleBox" id=3]
 [ext_resource path="res://assets/ui_buttons_styles/hover_button_style.tres" type="StyleBox" id=4]
 [ext_resource path="res://src/UI/MainMenu/anim_logo/AnimLogoScene.tscn" type="PackedScene" id=5]
-[ext_resource path="res://assets/background.png" type="Texture" id=6]
+[ext_resource path="res://src/BGSprite/BGSprite.tscn" type="PackedScene" id=6]
 [ext_resource path="res://assets/ui_buttons_styles/pressed_button_style.tres" type="StyleBox" id=7]
 
 [node name="MainMenu" type="CanvasLayer"]
@@ -17,20 +17,7 @@ pause_mode = 2
 anchor_right = 1.0
 anchor_bottom = 1.0
 
-[node name="TextureRect" type="TextureRect" parent="Control"]
-margin_right = 1125.0
-margin_bottom = 2436.0
-texture = ExtResource( 6 )
-stretch_mode = 2
-__meta__ = {
-"_edit_use_anchors_": true
-}
-
-[node name="ColorRect" type="ColorRect" parent="Control"]
-visible = false
-anchor_right = 1.0
-anchor_bottom = 1.0
-color = Color( 0, 0, 0, 0.117647 )
+[node name="BGSprite" parent="Control" instance=ExtResource( 6 )]
 
 [node name="MarginContainer" type="MarginContainer" parent="Control"]
 anchor_right = 1.0

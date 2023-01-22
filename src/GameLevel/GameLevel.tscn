@@ -1,7 +1,6 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://src/GameLevel/GameLevel.gd" type="Script" id=1]
-[ext_resource path="res://src/Obstacles/Obstacle3/ObstaclePendulum.tscn" type="PackedScene" id=2]
 [ext_resource path="res://src/Obstacles/Obstacle1/ObstacleCircleRotate.tscn" type="PackedScene" id=3]
 [ext_resource path="res://src/BeeHero/BeeHero.tscn" type="PackedScene" id=4]
 [ext_resource path="res://src/BGSprite/BGSprite.tscn" type="PackedScene" id=5]
@@ -29,12 +28,12 @@ pause_menu = ExtResource( 8 )
 shift_distance = 1000
 
 [node name="Obstacle2" parent="." instance=ExtResource( 3 )]
-position = Vector2( 502, -5494 )
+position = Vector2( 514, -3828 )
 rotation = -1.0821
 rotation_speed = -100
 
 [node name="Obstacle4" parent="." instance=ExtResource( 3 )]
-position = Vector2( 585, -3932 )
+position = Vector2( 653, -1915 )
 rotation = 2.61276
 rotation_speed = -120
 
@@ -47,45 +46,35 @@ position = Vector2( 165, -181 )
 rotation = -2.83791
 rotation_speed = -60
 
-[node name="Position2D" type="Position2D" parent="."]
-position = Vector2( 1634, -2187 )
-rotation = 1.5708
-scale = Vector2( 2, 2 )
-
-[node name="ObstaclePendulum" parent="Position2D" instance=ExtResource( 2 )]
-position = Vector2( 0, -1.5 )
-rotation = -1.39452
-rotation_speed = 20
-
 [node name="ObstacleHorizontalLine2" parent="." instance=ExtResource( 7 )]
-position = Vector2( 540, -6616 )
+position = Vector2( 552, -5474 )
 move_speed = 400.0
 pause_menu = ExtResource( 8 )
 shift_distance = 1000
 
 [node name="ObstacleHorizontalLine4" parent="." instance=ExtResource( 7 )]
-position = Vector2( 496, -7987 )
+position = Vector2( 508, -6845 )
 move_speed = 400.0
 pause_menu = ExtResource( 8 )
 shift_distance = 1000
 
 [node name="ObstacleHorizontalLine3" parent="." instance=ExtResource( 7 )]
-position = Vector2( 554, -7282 )
+position = Vector2( 566, -6140 )
 move_speed = 600.0
 direction = -1
 pause_menu = ExtResource( 8 )
 shift_distance = 1000
 
 [node name="ObstacleStickRotate3" parent="." instance=ExtResource( 6 )]
-position = Vector2( 313, -8868 )
+position = Vector2( 301, -8076 )
 rotation = -2.83791
 rotation_speed = -100
 
 [node name="ObstacleStickRotate4" parent="." instance=ExtResource( 6 )]
-position = Vector2( 883, -10195 )
+position = Vector2( 871, -9403 )
 rotation = -4.63908
 
 [node name="Obstacle3" parent="." instance=ExtResource( 3 )]
-position = Vector2( 449, -11764 )
+position = Vector2( 366.999, -11286 )
 rotation = -1.0821
 rotation_speed = 110
