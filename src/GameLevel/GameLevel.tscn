@@ -114,3 +114,14 @@ position = Vector2( 577, -21284 )
 rotation = 6.28319
 scale = Vector2( 2.4, 2.4 )
 rotation_speed = 90
+
+[node name="ObstacleCircleRotate6" parent="." instance=ExtResource( 3 )]
+position = Vector2( 577, -24774 )
+scale = Vector2( 1.4, 1.4 )
+rotation_speed = -90
+
+[node name="ObstacleCircleRotate7" parent="." instance=ExtResource( 3 )]
+position = Vector2( 577, -23416 )
+rotation = 3.14159
+scale = Vector2( 1.4, 1.4 )
+rotation_speed = 90
