@@ -165,31 +165,37 @@ script = ExtResource( 2 )
 [node name="Sprite" type="Sprite" parent="."]
 modulate = Color( 1, 1, 1, 0 )
 position = Vector2( 396.364, 165 )
+z_index = 1
 texture = ExtResource( 3 )
 
 [node name="Sprite2" type="Sprite" parent="."]
 modulate = Color( 1, 1, 1, 0 )
 position = Vector2( 743.636, 768 )
+z_index = 1
 texture = ExtResource( 3 )
 
 [node name="Sprite3" type="Sprite" parent="."]
 modulate = Color( 1, 1, 1, 0 )
 position = Vector2( 220, 1078 )
+z_index = 1
 texture = ExtResource( 3 )
 
 [node name="Sprite6" type="Sprite" parent="."]
 modulate = Color( 1, 1, 1, 0 )
 position = Vector2( 40.9091, 1990 )
+z_index = 1
 texture = ExtResource( 3 )
 
 [node name="Sprite4" type="Sprite" parent="."]
 modulate = Color( 1, 1, 1, 0 )
 position = Vector2( 918.182, 1683 )
+z_index = 1
 texture = ExtResource( 3 )
 
 [node name="Sprite5" type="Sprite" parent="."]
 modulate = Color( 1, 1, 1, 0 )
 position = Vector2( 569.091, 2298 )
+z_index = 1
 texture = ExtResource( 3 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]

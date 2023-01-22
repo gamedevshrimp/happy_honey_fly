@@ -74,43 +74,42 @@ rotation = -1.44164
 rotation_speed = 110
 
 [node name="ObstacleHorizontalLine5" parent="." instance=ExtResource( 7 )]
-position = Vector2( 570, -16868 )
+position = Vector2( 574, -16572 )
 move_speed = 400.0
 pause_menu = ExtResource( 8 )
 shift_distance = 1000
 
 [node name="ObstacleHorizontalLine7" parent="." instance=ExtResource( 7 )]
-position = Vector2( 584, -17534 )
+position = Vector2( 577, -17379 )
 move_speed = 600.0
 direction = -1
 pause_menu = ExtResource( 8 )
 shift_distance = 1000
 
 [node name="ObstacleHorizontalLine6" parent="." instance=ExtResource( 7 )]
-position = Vector2( 526, -18239 )
+position = Vector2( 552, -18160 )
 move_speed = 400.0
 pause_menu = ExtResource( 8 )
 shift_distance = 1000
 
 [node name="ObstacleCircleRotate4" parent="." instance=ExtResource( 3 )]
 position = Vector2( 577, -21284 )
-rotation = 3.38594
 scale = Vector2( 1.4, 1.4 )
 rotation_speed = -90
 
 [node name="ObstacleCircleRotate5" parent="." instance=ExtResource( 3 )]
 position = Vector2( 577, -21284 )
-rotation = 6.28319
+rotation = 3.14159
 scale = Vector2( 2.4, 2.4 )
-rotation_speed = 90
+rotation_speed = 60
 
 [node name="ObstacleCircleRotate6" parent="." instance=ExtResource( 3 )]
-position = Vector2( 577, -24774 )
+position = Vector2( 577, -25808 )
 scale = Vector2( 1.4, 1.4 )
 rotation_speed = -90
 
 [node name="ObstacleCircleRotate7" parent="." instance=ExtResource( 3 )]
-position = Vector2( 577, -23416 )
+position = Vector2( 577, -24450 )
 rotation = 3.14159
 scale = Vector2( 1.4, 1.4 )
 rotation_speed = 90
