@@ -1,0 +1,72 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://src/UI/TutorMenu/tap.png" type="Texture" id=1]
+[ext_resource path="res://src/BeeHero/BeeHeroTutor.tscn" type="PackedScene" id=2]
+[ext_resource path="res://src/UI/TutorMenu/TutorMenu.gd" type="Script" id=3]
+[ext_resource path="res://src/UI/TutorMenu/TuturTarget.tscn" type="PackedScene" id=4]
+[ext_resource path="res://src/BGSprite/BGSprite.tscn" type="PackedScene" id=6]
+[ext_resource path="res://src/UI/TutorMenu/hand.png" type="Texture" id=7]
+
+[node name="TutorMenu" type="CanvasLayer"]
+pause_mode = 2
+script = ExtResource( 3 )
+__meta__ = {
+"_edit_vertical_guides_": [ 1125.0 ]
+}
+
+[node name="Control" type="Control" parent="."]
+pause_mode = 2
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -562.5
+margin_top = -1218.0
+margin_right = 562.5
+margin_bottom = 1218.0
+mouse_filter = 2
+
+[node name="BeeHero" parent="Control" instance=ExtResource( 2 )]
+position = Vector2( 589, 1202 )
+scale = Vector2( 2, 2 )
+
+[node name="BGSprite" parent="Control" instance=ExtResource( 6 )]
+
+[node name="BGSprite2" parent="Control" instance=ExtResource( 6 )]
+position = Vector2( -4, 2732 )
+
+[node name="MarginContainer" type="MarginContainer" parent="Control"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -1024.0
+margin_top = -1366.0
+margin_right = 1024.0
+margin_bottom = 1366.0
+custom_constants/margin_right = 100
+custom_constants/margin_top = 700
+custom_constants/margin_left = 100
+custom_constants/margin_bottom = 700
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="Control/MarginContainer"]
+margin_left = 1024.0
+margin_top = 2032.0
+margin_right = 1024.0
+margin_bottom = 2032.0
+size_flags_horizontal = 4
+size_flags_vertical = 8
+
+[node name="Hand" type="Sprite" parent="Control/MarginContainer/VBoxContainer2"]
+position = Vector2( 51.4, 53.5 )
+scale = Vector2( 0.6, 0.6 )
+texture = ExtResource( 7 )
+
+[node name="TuturTarget" parent="Control/MarginContainer/VBoxContainer2" instance=ExtResource( 4 )]
+position = Vector2( 9.5, -1432 )
+collision_layer = 2
+
+[node name="tap" type="Sprite" parent="Control/MarginContainer/VBoxContainer2"]
+position = Vector2( -56.6, -224.5 )
+scale = Vector2( 0.6, 0.6 )
+texture = ExtResource( 1 )
