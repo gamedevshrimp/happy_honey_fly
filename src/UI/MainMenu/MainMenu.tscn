@@ -127,7 +127,8 @@ anchor_bottom = 1.0
 [node name="BGSprite" parent="Control" instance=ExtResource( 6 )]
 
 [node name="BGSprite2" parent="Control" instance=ExtResource( 6 )]
-position = Vector2( 0, 2732 )
+position = Vector2( 0, 2700 )
+z_index = -6
 
 [node name="MarginContainer" type="MarginContainer" parent="Control"]
 anchor_left = 0.5

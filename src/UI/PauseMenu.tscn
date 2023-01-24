@@ -162,7 +162,7 @@ custom_constants/separation = 20
 pause_mode = 2
 modulate = Color( 1, 1, 1, 0 )
 margin_right = 800.0
-margin_bottom = 200.0
+margin_bottom = 258.0
 rect_min_size = Vector2( 700, 200 )
 rect_scale = Vector2( 1e-05, 1e-05 )
 rect_pivot_offset = Vector2( 399.5, 106 )
@@ -176,9 +176,9 @@ text = " MENU"
 
 [node name="ButtonReset" type="Button" parent="Control/VBoxContainer"]
 pause_mode = 2
-margin_top = 220.0
+margin_top = 278.0
 margin_right = 800.0
-margin_bottom = 420.0
+margin_bottom = 536.0
 rect_min_size = Vector2( 800, 200 )
 rect_scale = Vector2( 1e-05, 1e-05 )
 rect_pivot_offset = Vector2( 392.5, 106 )
