@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://src/GameLevel/GameLevel.gd" type="Script" id=1]
 [ext_resource path="res://src/PickUp/PickUP.tscn" type="PackedScene" id=2]
@@ -8,6 +8,8 @@
 [ext_resource path="res://assets/fonts/game_level_dynamicfont.tres" type="DynamicFont" id=6]
 [ext_resource path="res://src/Obstacles/Obstacle4/Obstacle4.tscn" type="PackedScene" id=7]
 [ext_resource path="res://src/UI/PauseMenu.tscn" type="PackedScene" id=8]
+[ext_resource path="res://src/Obstacles/Obstacle5/ObstacleSquare.tscn" type="PackedScene" id=9]
+[ext_resource path="res://src/Obstacles/Obstacle6/ObstacleSquare2.tscn" type="PackedScene" id=10]
 
 [node name="GameLevel" type="Node2D"]
 script = ExtResource( 1 )
@@ -35,7 +37,8 @@ path_to_bee = NodePath("../../BeeHero")
 [node name="Label" type="Label" parent="Control/CanvasLayer"]
 unique_name_in_owner = true
 anchor_right = 1.0
-margin_bottom = 258.0
+margin_top = 43.0
+margin_bottom = 301.0
 size_flags_horizontal = 4
 custom_fonts/font = ExtResource( 6 )
 text = "0"
@@ -131,6 +134,57 @@ rotation = 3.14159
 scale = Vector2( 1.4, 1.4 )
 rotation_speed = 90
 
+[node name="ObstacleSquare" parent="Obstacles" instance=ExtResource( 9 )]
+position = Vector2( 576, -30443 )
+
+[node name="ObstacleCircleRotate8" parent="Obstacles" instance=ExtResource( 3 )]
+position = Vector2( 579, -34232 )
+scale = Vector2( 1.4, 1.4 )
+rotation_speed = -110
+
+[node name="ObstacleCircleRotate9" parent="Obstacles" instance=ExtResource( 3 )]
+position = Vector2( 579, -34232 )
+rotation = 3.14159
+scale = Vector2( 2.4, 2.4 )
+rotation_speed = 80
+
+[node name="ObstacleHorizontalLine8" parent="Obstacles" instance=ExtResource( 7 )]
+position = Vector2( 574, -40155 )
+move_speed = 400.0
+pause_menu = ExtResource( 8 )
+shift_distance = 1000
+
+[node name="ObstacleHorizontalLine9" parent="Obstacles" instance=ExtResource( 7 )]
+position = Vector2( 577, -40775 )
+move_speed = 600.0
+direction = -1
+pause_menu = ExtResource( 8 )
+shift_distance = 1000
+
+[node name="ObstacleHorizontalLine10" parent="Obstacles" instance=ExtResource( 7 )]
+position = Vector2( 578, -41475 )
+move_speed = 400.0
+pause_menu = ExtResource( 8 )
+shift_distance = 1000
+
+[node name="ObstacleSquare2" parent="Obstacles" instance=ExtResource( 10 )]
+position = Vector2( 576, -47924 )
+
+[node name="ObstacleSquare3" parent="Obstacles" instance=ExtResource( 10 )]
+position = Vector2( 593, -55019 )
+scale = Vector2( -1, 1 )
+
+[node name="ObstacleCircleRotate10" parent="Obstacles" instance=ExtResource( 3 )]
+position = Vector2( 578, -51951 )
+scale = Vector2( 1.4, 1.4 )
+rotation_speed = -110
+
+[node name="ObstacleCircleRotate11" parent="Obstacles" instance=ExtResource( 3 )]
+position = Vector2( 578, -50593 )
+rotation = 3.14159
+scale = Vector2( 1.4, 1.4 )
+rotation_speed = 110
+
 [node name="Coins" type="Node2D" parent="."]
 
 [node name="PickUP" parent="Coins" instance=ExtResource( 2 )]
@@ -161,52 +215,109 @@ position = Vector2( 580, -9647 )
 position = Vector2( 576, -10823 )
 
 [node name="PickUP13" parent="Coins" instance=ExtResource( 2 )]
-position = Vector2( 551, -11606 )
+position = Vector2( 574, -11611 )
 
 [node name="PickUP14" parent="Coins" instance=ExtResource( 2 )]
-position = Vector2( 551, -13678 )
+position = Vector2( 574, -13674 )
 
 [node name="PickUP15" parent="Coins" instance=ExtResource( 2 )]
-position = Vector2( 551, -14077 )
+position = Vector2( 576, -14079 )
 
 [node name="PickUP16" parent="Coins" instance=ExtResource( 2 )]
-position = Vector2( 551, -14443 )
+position = Vector2( 577, -14445 )
 
 [node name="PickUP17" parent="Coins" instance=ExtResource( 2 )]
-position = Vector2( 551, -14859 )
+position = Vector2( 577, -14857 )
 
 [node name="PickUP18" parent="Coins" instance=ExtResource( 2 )]
-position = Vector2( 551, -17003 )
+position = Vector2( 576, -17005 )
 
 [node name="PickUP19" parent="Coins" instance=ExtResource( 2 )]
-position = Vector2( 551, -17818 )
+position = Vector2( 574, -17822 )
 
 [node name="PickUP20" parent="Coins" instance=ExtResource( 2 )]
-position = Vector2( 551, -18611 )
+position = Vector2( 574, -18620 )
 
 [node name="PickUP21" parent="Coins" instance=ExtResource( 2 )]
-position = Vector2( 551, -21406 )
-
-[node name="PickUP22" parent="Coins" instance=ExtResource( 2 )]
-position = Vector2( 551, -21406 )
+position = Vector2( 572, -21406 )
 
 [node name="PickUP23" parent="Coins" instance=ExtResource( 2 )]
-position = Vector2( 551, -22915 )
+position = Vector2( 570, -22913 )
 
 [node name="PickUP24" parent="Coins" instance=ExtResource( 2 )]
-position = Vector2( 551, -23234 )
+position = Vector2( 572, -23234 )
 
 [node name="PickUP25" parent="Coins" instance=ExtResource( 2 )]
-position = Vector2( 551, -23549 )
-
-[node name="PickUP26" parent="Coins" instance=ExtResource( 2 )]
-position = Vector2( 551, -23549 )
+position = Vector2( 574, -23545 )
 
 [node name="PickUP27" parent="Coins" instance=ExtResource( 2 )]
-position = Vector2( 551, -26441 )
+position = Vector2( 577, -27188 )
 
 [node name="PickUP28" parent="Coins" instance=ExtResource( 2 )]
-position = Vector2( 551, -26773 )
+position = Vector2( 576, -26796 )
 
 [node name="PickUP29" parent="Coins" instance=ExtResource( 2 )]
-position = Vector2( 585, -28782 )
+position = Vector2( 581, -28800 )
+
+[node name="PickUP30" parent="Coins" instance=ExtResource( 2 )]
+position = Vector2( 574, -35983 )
+
+[node name="PickUP31" parent="Coins" instance=ExtResource( 2 )]
+position = Vector2( 581, -34425 )
+
+[node name="PickUP32" parent="Coins" instance=ExtResource( 2 )]
+position = Vector2( 574, -36374 )
+
+[node name="PickUP33" parent="Coins" instance=ExtResource( 2 )]
+position = Vector2( 578, -36734 )
+
+[node name="PickUP34" parent="Coins" instance=ExtResource( 2 )]
+position = Vector2( 578, -38334 )
+
+[node name="PickUP35" parent="Coins" instance=ExtResource( 2 )]
+position = Vector2( 578, -38722 )
+
+[node name="PickUP36" parent="Coins" instance=ExtResource( 2 )]
+position = Vector2( 578, -39092 )
+
+[node name="PickUP37" parent="Coins" instance=ExtResource( 2 )]
+position = Vector2( 575, -40469 )
+
+[node name="PickUP38" parent="Coins" instance=ExtResource( 2 )]
+position = Vector2( 576, -41169 )
+
+[node name="PickUP39" parent="Coins" instance=ExtResource( 2 )]
+position = Vector2( 576, -41852 )
+
+[node name="PickUP40" parent="Coins" instance=ExtResource( 2 )]
+position = Vector2( 578, -43654 )
+
+[node name="PickUP41" parent="Coins" instance=ExtResource( 2 )]
+position = Vector2( 578, -44042 )
+
+[node name="PickUP42" parent="Coins" instance=ExtResource( 2 )]
+position = Vector2( 578, -44412 )
+
+[node name="PickUP43" parent="Coins" instance=ExtResource( 2 )]
+position = Vector2( 578, -46180 )
+
+[node name="PickUP44" parent="Coins" instance=ExtResource( 2 )]
+position = Vector2( 578, -46568 )
+
+[node name="PickUP45" parent="Coins" instance=ExtResource( 2 )]
+position = Vector2( 578, -46938 )
+
+[node name="PickUP46" parent="Coins" instance=ExtResource( 2 )]
+position = Vector2( 575, -49541 )
+
+[node name="PickUP47" parent="Coins" instance=ExtResource( 2 )]
+position = Vector2( 575, -50532 )
+
+[node name="PickUP48" parent="Coins" instance=ExtResource( 2 )]
+position = Vector2( 575, -53191 )
+
+[node name="PickUP49" parent="Coins" instance=ExtResource( 2 )]
+position = Vector2( 575, -54060 )
+
+[node name="PickUP50" parent="Coins" instance=ExtResource( 2 )]
+position = Vector2( 575, -56616 )
